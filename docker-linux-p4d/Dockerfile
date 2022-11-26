@@ -1,5 +1,5 @@
 # P4D Base Image
-FROM linux_p4d-base
+FROM linux__arm64_p4d-base
 #Copy Precompiled binaries to root directory
 COPY root/ /
 COPY scripts/ /home/p4d/
