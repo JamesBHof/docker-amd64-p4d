@@ -205,7 +205,7 @@ if [[ -z "$ENABLE_MOS" ]];
   echo "Starting mosquitto"
   /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf -d
   sleep 1
-  $ENABLE_MOS=true
+  ENABLE_MOS=true
  else
   if [[ "$ENABLE_MOS" == "true" ]];
    then
