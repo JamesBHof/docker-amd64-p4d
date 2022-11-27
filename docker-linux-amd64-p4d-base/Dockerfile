@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # wiringpi
 # python-mysql.connector
 	
+	
 # RUN apt-get install -y   
 # Add User p4d and give Privileges
 ENV USER p4d
