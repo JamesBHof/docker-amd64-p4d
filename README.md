@@ -6,6 +6,7 @@ This daemon is fetching data from the S 3200 and store it in a MySQL database.
 Written by: *Jörg Wendel (linux at jwendel dot de)*
 
 Original Repo: https://github.com/horchi/linux-p4d
+Original Repo: https://github.com/N3m3515/docker-p4d/
 
 ## License
 This code is distributed under the terms and conditions of the GNU GENERAL PUBLIC LICENSE. See the file LICENSE for details.
@@ -30,39 +31,10 @@ Ich kann  nicht ausschließen das es zu Fehlfunktionen oder unerwartetem Verhalt
 auch hinsichtlich der zur Heizung übertragenen Daten und damit verbundenen, mehr oder
 weniger kritischen Fehlfunktionen derselben kommen kann!
 
-## Donation
-If this project help you, you can give me a cup of coffee :)
-
-[![paypal](https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KUF9ZAQ5UTHUN)
-
-## Prerequisits:
-- USB-Serial Converter based on FTDI chip
-- USB-Serial converter must be connected to COM1 on Fröling mainboard
-- A Linux based operating system is required
-
-For a ready Build Image visit:
-https://hub.docker.com/r/n3m3515/docker-p4d
+# For a ready Build Image visit:
+# https://hub.docker.com/r/n3m3515/docker-p4d
 
 ## Usage
-
-### Install Docker on a fresh Raspberry Pi
-
-```
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker pi
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-armv7" -o /usr/bin/docker-compose
-sudo chmod +x /usr/bin/docker-compose
-```
-
-#### Install p4d directly into Docker:
- 
-```
-cd ~
-curl -fsSL https://raw.githubusercontent.com/N3m3515/docker-p4d/main/docker-compose.yml -o /home/pi/docker-compose.yml 
-docker-compose up -d
-```
-
 
 ### Docker Standalone
 
@@ -75,7 +47,7 @@ Save and edit the the below configuration as docker-compose.yml and run `docker-
 
 services:
   p4d:
-    image: n3m3515/docker-p4d:latest
+    image: jamesbn/docker-amd64-p4d:latest
     container_name: docker-p4d
     privileged: true
     environment:
